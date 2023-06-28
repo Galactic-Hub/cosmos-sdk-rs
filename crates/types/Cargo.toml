@@ -24,5 +24,6 @@ prost-types = { workspace = true }
 hex = { workspace = true }
 lru = { workspace = true }
 lazy_static = { workspace = true }
+tendermint = { workspace = true }
 
 [features]

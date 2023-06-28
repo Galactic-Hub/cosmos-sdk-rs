@@ -1,4 +1,4 @@
-// pub mod abci;
+pub mod abci;
 pub mod account;
 pub mod address;
 // pub mod authz;
@@ -6,7 +6,7 @@ pub mod address;
 pub mod coin;
 // pub mod collections;
 pub mod config;
-// pub mod context;
+pub mod context;
 // pub mod dec_coin;
 // pub mod denom;
 pub mod errors;

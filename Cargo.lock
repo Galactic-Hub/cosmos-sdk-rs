@@ -425,6 +425,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "cosmos-sdk-rs-core"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "time",
+ "tonic",
+]
+
+[[package]]
 name = "cosmos-sdk-rs-helper"
 version = "0.1.0"
 dependencies = [
@@ -475,6 +484,7 @@ dependencies = [
  "serde",
  "serde_derive",
  "subtle-encoding",
+ "tendermint",
  "thiserror",
  "tracing",
 ]

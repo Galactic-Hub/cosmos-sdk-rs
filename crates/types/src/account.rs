@@ -1,11 +1,11 @@
 use anyhow::Result;
 
-// AccountI is an interface used to store coins at a given address within state.
-// It presumes a notion of sequence numbers for replay protection,
-// a notion of account numbers for replay protection for previously pruned accounts,
-// and a pubkey for authentication purposes.
-//
-// Many complex conditions can be used in the concrete struct which implements AccountI.
+/// AccountI is an interface used to store coins at a given address within state.
+/// It presumes a notion of sequence numbers for replay protection,
+/// a notion of account numbers for replay protection for previously pruned accounts,
+/// and a pubkey for authentication purposes.
+///
+/// Many complex conditions can be used in the concrete struct which implements AccountI.
 pub trait AccountI: prost::Message + std::fmt::Display {
     type AccAddress;
     type PubKey;
@@ -20,8 +20,8 @@ pub trait AccountI: prost::Message + std::fmt::Display {
     fn set_sequence() -> Result<()>;
 }
 
-// ModuleAccountI defines an account interface for modules that hold tokens in
-// an escrow.
+/// ModuleAccountI defines an account interface for modules that hold tokens in
+/// an escrow.
 pub trait ModuleAccountI: AccountI {
     fn get_name() -> String;
     fn get_permissions() -> Vec<String>;
