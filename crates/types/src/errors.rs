@@ -41,6 +41,18 @@ pub enum Error {
 
     #[error("invalid coin denom: `{left}`, `{right}`")]
     InvalidCoinDenom { left: String, right: String },
+
+    #[error("empty bech32 address")]
+    EmptyBech32Address,
+
+    #[error("invalid bech32 prefix")]
+    InvalidBech32Prefix,
+
+    #[error("decoding Bech32 address failed: must provide a non empty address")]
+    Bech32EmptyAddress,
+
+    #[error("decoding address from hex string failed: empty address")]
+    EmptyHexAddress,
 }
 
 impl From<std::convert::Infallible> for Error {

@@ -1,11 +1,11 @@
 // pub mod abci;
-// pub mod account;
+pub mod account;
 pub mod address;
 // pub mod authz;
 // pub mod bech32;
 pub mod coin;
 // pub mod collections;
-// pub mod config;
+pub mod config;
 // pub mod context;
 // pub mod dec_coin;
 // pub mod denom;
@@ -28,7 +28,7 @@ pub mod router;
 // pub mod simulation;
 pub mod staking;
 // pub mod tx;
-// pub mod tx_msg;
+pub mod tx_msg;
 // pub mod utils;
 
 pub mod serializers;

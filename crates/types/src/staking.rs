@@ -27,3 +27,7 @@ pub fn tokens_to_consensus_power(tokens: i64, power_reduction: i64) -> i64 {
 pub fn tokens_from_consensus_power(power: i64, power_reduction: i64) -> i64 {
     power * power_reduction
 }
+
+#[test]
+#[ignore = "have not implemented"]
+fn test_tokens_to_consensus_power() {}

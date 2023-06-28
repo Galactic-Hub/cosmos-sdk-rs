@@ -18,5 +18,11 @@ primitive-types = { workspace = true }
 subtle-encoding = { workspace = true }
 regex = { workspace = true }
 tracing = { workspace = true }
+bech32 = { workspace = true }
+prost = { workspace = true, features = ["prost-derive"] }
+prost-types = { workspace = true }
+hex = { workspace = true }
+lru = { workspace = true }
+lazy_static = { workspace = true }
 
 [features]
