@@ -1,0 +1,22 @@
+[package]
+name = "cosmos-sdk-rs-store"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+ics23 = {workspace = true , default-features = false, features = ["host-functions"] }
+prost = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+sha2 = { workspace = true }
+tendermint = { workspace = true }
+tracing = { workspace = true }
+
+cosmos-sdk-rs-helper = { version = "0.1", path = "../helper" }
+
+[dev-dependencies]
+bytes = { workspace = true }
+lazy_static = { workspace = true }
+proptest = { workspace = true }
+rand ={ workspace = true }
