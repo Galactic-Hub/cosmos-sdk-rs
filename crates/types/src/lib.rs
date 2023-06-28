@@ -26,7 +26,7 @@ pub mod kv;
 // pub mod result;
 // pub mod router;
 // pub mod simulation;
-// pub mod staking;
+pub mod staking;
 // pub mod tx;
 // pub mod tx_msg;
 // pub mod utils;
