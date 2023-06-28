@@ -184,6 +184,7 @@ dependencies = [
  "prost",
  "rand",
  "serde_json",
+ "tendermint",
  "tendermint-abci",
  "tendermint-proto",
  "thiserror",
