@@ -24,7 +24,7 @@ pub mod kv;
 // pub mod query;
 // pub mod registry;
 // pub mod result;
-// pub mod router;
+pub mod router;
 // pub mod simulation;
 pub mod staking;
 // pub mod tx;
