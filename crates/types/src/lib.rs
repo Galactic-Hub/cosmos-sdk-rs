@@ -14,7 +14,7 @@ pub mod errors;
 // pub mod grpc;
 // pub mod handler;
 // pub mod invariant;
-// pub mod kv;
+pub mod kv;
 // pub mod mapcoins;
 // pub mod math;
 // pub mod mempool;
