@@ -6,6 +6,8 @@ use ibc_proto::google::protobuf::Any;
 
 use crate::errors::Error;
 use anyhow::Result;
+use ibc_proto::cosmos::crypto::ed25519::PubKey as RawEd25519PubKey;
+use ibc_proto::cosmos::crypto::secp256k1::PubKey as RawSecp256k1PubKey;
 use prost::Message;
 use serde::{Deserialize, Serialize};
 use std::str::FromStr;
@@ -57,11 +59,11 @@ impl PublicKey {
     /// Convert this [`PublicKey`] to a Protobuf [`Any`] type.
     pub fn to_any(&self) -> Result<Any, Error> {
         let value = match self.0 {
-            tendermint::PublicKey::Ed25519(_) => ibc_proto::cosmos::crypto::ed25519::PubKey {
+            tendermint::PublicKey::Ed25519(_) => RawEd25519PubKey {
                 key: self.to_bytes(),
             }
             .encode_to_vec(),
-            tendermint::PublicKey::Secp256k1(_) => ibc_proto::cosmos::crypto::secp256k1::PubKey {
+            tendermint::PublicKey::Secp256k1(_) => RawSecp256k1PubKey {
                 key: self.to_bytes(),
             }
             .encode_to_vec(),
@@ -105,12 +107,8 @@ impl TryFrom<&Any> for PublicKey {
 
     fn try_from(any: &Any) -> Result<PublicKey, Self::Error> {
         match any.type_url.as_str() {
-            Self::ED25519_TYPE_URL => {
-                ibc_proto::cosmos::crypto::ed25519::PubKey::decode(&*any.value)?.try_into()
-            }
-            Self::SECP256K1_TYPE_URL => {
-                ibc_proto::cosmos::crypto::secp256k1::PubKey::decode(&*any.value)?.try_into()
-            }
+            Self::ED25519_TYPE_URL => RawEd25519PubKey::decode(&*any.value)?.try_into(),
+            Self::SECP256K1_TYPE_URL => RawSecp256k1PubKey::decode(&*any.value)?.try_into(),
             other => Err(Error::Custom(format!(
                 "invalid type URL for public key: {}",
                 other
@@ -119,24 +117,20 @@ impl TryFrom<&Any> for PublicKey {
     }
 }
 
-impl TryFrom<ibc_proto::cosmos::crypto::ed25519::PubKey> for PublicKey {
+impl TryFrom<RawEd25519PubKey> for PublicKey {
     type Error = Error;
 
-    fn try_from(
-        public_key: ibc_proto::cosmos::crypto::ed25519::PubKey,
-    ) -> Result<PublicKey, Self::Error> {
+    fn try_from(public_key: RawEd25519PubKey) -> Result<PublicKey, Self::Error> {
         tendermint::public_key::PublicKey::from_raw_ed25519(&public_key.key)
             .map(Into::into)
             .ok_or_else(|| Error::Custom("Cypto".into()))
     }
 }
 
-impl TryFrom<ibc_proto::cosmos::crypto::secp256k1::PubKey> for PublicKey {
+impl TryFrom<RawSecp256k1PubKey> for PublicKey {
     type Error = Error;
 
-    fn try_from(
-        public_key: ibc_proto::cosmos::crypto::secp256k1::PubKey,
-    ) -> Result<PublicKey, Self::Error> {
+    fn try_from(public_key: RawSecp256k1PubKey) -> Result<PublicKey, Self::Error> {
         tendermint::public_key::PublicKey::from_raw_secp256k1(&public_key.key)
             .map(Into::into)
             .ok_or_else(|| Error::Custom("Cypto".into()))
