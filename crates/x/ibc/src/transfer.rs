@@ -1,6 +1,6 @@
 use core::fmt::Debug;
-use cosmos_sdk_rs_helper::Height;
-use cosmos_sdk_rs_store::{
+use cosmos_helper::Height;
+use cosmos_store::{
     SharedStore, Store, {BinStore, JsonStore, ProtobufStore, TypedStore},
 };
 use cosmos_x_auth::account::ACCOUNT_PREFIX;

@@ -27,8 +27,8 @@ use tendermint_proto::crypto::ProofOp;
 use super::path::UpgradePlanPath;
 use super::service::UpgradeService;
 use crate::query::UPGRADE_PLAN_QUERY_PATH;
-use cosmos_sdk_rs_helper::{Height, Path, QueryResult};
-use cosmos_sdk_rs_store::{ProtobufStore, ProvableStore, SharedStore, Store, TypedStore};
+use cosmos_helper::{Height, Path, QueryResult};
+use cosmos_store::{ProtobufStore, ProvableStore, SharedStore, Store, TypedStore};
 use cosmos_x_module_api::module::Module;
 
 #[derive(Clone)]
@@ -90,7 +90,7 @@ where
             let path: Path = String::from_utf8(data.to_vec())
                 .map_err(|_| Error::InvalidPath)?
                 .try_into()
-                .map_err(|e: cosmos_sdk_rs_helper::error::Error| Error::Unknown(e.to_string()))?;
+                .map_err(|e: cosmos_helper::error::Error| Error::Unknown(e.to_string()))?;
 
             debug!(
                 "Querying for path ({}) at height {:?}",

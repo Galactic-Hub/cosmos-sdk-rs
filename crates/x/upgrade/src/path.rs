@@ -27,7 +27,7 @@ impl UpgradePlanPath {
     }
 }
 
-impl From<UpgradePlanPath> for cosmos_sdk_rs_helper::Path {
+impl From<UpgradePlanPath> for cosmos_helper::Path {
     fn from(ibc_path: UpgradePlanPath) -> Self {
         Self::try_from(ibc_path.to_string()).unwrap() // safety - `IbcPath`s are correct-by-construction
     }

@@ -13,5 +13,5 @@ tendermint-proto = { workspace = true }
 ibc-proto = { workspace = true , default-features = false, features = ["server"] }
 cosmrs = { workspace = true }
 serde_json = { workspace = true }
-cosmos-sdk-rs-helper = { version = "0.1", path = "../../helper" }
-cosmos-sdk-rs-store = { version = "0.1", path = "../../store" }
+cosmos-helper = { version = "0.1", path = "../../helper" }
+cosmos-store = { version = "0.1", path = "../../store" }

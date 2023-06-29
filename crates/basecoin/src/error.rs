@@ -1,4 +1,4 @@
-use cosmos_sdk_rs_helper::error::Error as HelperError;
+use cosmos_helper::error::Error as HelperError;
 use cosmos_x_bank::error::Error as BankError;
 use cosmos_x_gov::error::Error as GovError;
 use cosmos_x_ibc::error::Error as IbcError;

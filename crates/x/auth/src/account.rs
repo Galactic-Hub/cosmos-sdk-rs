@@ -1,6 +1,6 @@
 use std::convert::{TryFrom, TryInto};
 
-use cosmos_sdk_rs_helper::Path;
+use cosmos_helper::Path;
 use cosmrs::AccountId;
 use ibc_proto::{cosmos::auth::v1beta1::BaseAccount, google::protobuf::Any};
 use prost::Message;

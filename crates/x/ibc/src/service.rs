@@ -1,8 +1,8 @@
 use std::str::FromStr;
 
 use crate::CHAIN_REVISION_NUMBER;
-use cosmos_sdk_rs_helper::{Height, Path};
-use cosmos_sdk_rs_store::{
+use cosmos_helper::{Height, Path};
+use cosmos_store::{
     BinStore, JsonStore, ProtobufStore, ProvableStore, SharedStore, Store, TypedSet, TypedStore,
 };
 use ibc::core::ics24_host::identifier::PortId;

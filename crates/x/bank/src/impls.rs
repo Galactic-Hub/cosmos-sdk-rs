@@ -15,8 +15,8 @@ use cosmos_x_auth::account::{AuthAccount, ACCOUNT_PREFIX};
 use cosmos_x_auth::context::{AccountKeeper, AccountReader};
 use cosmos_x_module_api::module::Module;
 
-use cosmos_sdk_rs_helper::{Height, Path, QueryResult};
-use cosmos_sdk_rs_store::{
+use cosmos_helper::{Height, Path, QueryResult};
+use cosmos_store::{
     SharedStore,
     {codec::JsonCodec, Codec},
     {JsonStore, TypedStore}, {ProvableStore, Store},

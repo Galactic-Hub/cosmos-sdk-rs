@@ -12,7 +12,7 @@ use ibc_proto::cosmos::{
 };
 use tonic::{Request, Response, Status};
 
-use cosmos_sdk_rs_store::ProvableStore;
+use cosmos_store::ProvableStore;
 use cosmos_x_bank_type::Denom;
 use tracing::debug;
 

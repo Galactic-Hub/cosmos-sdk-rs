@@ -19,8 +19,8 @@ use super::path::ProposalPath;
 use super::proposal::Proposal;
 use super::service::GovernanceService;
 use crate::msg::MsgSubmitProposal;
-use cosmos_sdk_rs_helper::{Height, Path, QueryResult};
-use cosmos_sdk_rs_store::{ProtobufStore, SharedRw, SharedStore, Store, TypedStore};
+use cosmos_helper::{Height, Path, QueryResult};
+use cosmos_store::{ProtobufStore, SharedRw, SharedStore, Store, TypedStore};
 use cosmos_x_module_api::module::Module;
 use cosmos_x_upgrade::impls::Upgrade;
 

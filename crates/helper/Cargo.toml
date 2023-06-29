@@ -1,5 +1,5 @@
 [package]
-name = "cosmos-sdk-rs-helper"
+name = "cosmos-helper"
 version = "0.1.0"
 edition = "2021"
 

@@ -1,4 +1,4 @@
-use cosmos_sdk_rs_helper::{Height, Path, RawHeight};
+use cosmos_helper::{Height, Path, RawHeight};
 use ics23::CommitmentProof;
 use std::fmt::Debug;
 

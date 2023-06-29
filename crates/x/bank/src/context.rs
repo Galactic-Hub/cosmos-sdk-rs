@@ -1,6 +1,6 @@
 use std::{fmt::Debug, str::FromStr};
 
-use cosmos_sdk_rs_helper::Height;
+use cosmos_helper::Height;
 
 pub trait BankReader {
     type Address;

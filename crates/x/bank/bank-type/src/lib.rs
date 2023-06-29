@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 
 use ibc_proto::{cosmos::base::v1beta1::Coin as ProtoCoin, protobuf::Protobuf};
 
-use cosmos_sdk_rs_helper::{error::Error, Path};
+use cosmos_helper::{error::Error, Path};
 
 #[derive(Serialize, Deserialize, Debug, Default, PartialEq, Clone, Hash, Eq)]
 #[serde(transparent)]

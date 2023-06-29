@@ -176,9 +176,9 @@ dependencies = [
  "anyhow",
  "bytes",
  "clap",
- "cosmos-sdk-rs-config",
- "cosmos-sdk-rs-helper",
- "cosmos-sdk-rs-store",
+ "cosmos-config",
+ "cosmos-helper",
+ "cosmos-store",
  "cosmos-x-auth",
  "cosmos-x-bank",
  "cosmos-x-bank-type",
@@ -402,18 +402,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e496a50fda8aacccc86d7529e2c1e0892dbd0f898a6b5645b5561b89c3210efa"
 
 [[package]]
-name = "cosmos-sdk-proto"
-version = "0.19.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "73c9d2043a9e617b0d602fbc0a0ecd621568edbf3a9774890a6d562389bd8e1c"
-dependencies = [
- "prost",
- "prost-types",
- "tendermint-proto",
-]
-
-[[package]]
-name = "cosmos-sdk-rs-config"
+name = "cosmos-config"
 version = "0.1.0"
 dependencies = [
  "anyhow",
@@ -425,7 +414,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "cosmos-sdk-rs-core"
+name = "cosmos-core"
 version = "0.1.0"
 dependencies = [
  "anyhow",
@@ -434,7 +423,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "cosmos-sdk-rs-helper"
+name = "cosmos-helper"
 version = "0.1.0"
 dependencies = [
  "bytes",
@@ -447,11 +436,22 @@ dependencies = [
 ]
 
 [[package]]
-name = "cosmos-sdk-rs-store"
+name = "cosmos-sdk-proto"
+version = "0.19.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "73c9d2043a9e617b0d602fbc0a0ecd621568edbf3a9774890a6d562389bd8e1c"
+dependencies = [
+ "prost",
+ "prost-types",
+ "tendermint-proto",
+]
+
+[[package]]
+name = "cosmos-store"
 version = "0.1.0"
 dependencies = [
  "bytes",
- "cosmos-sdk-rs-helper",
+ "cosmos-helper",
  "ics23",
  "lazy_static",
  "proptest",
@@ -494,8 +494,8 @@ name = "cosmos-x-auth"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "cosmos-sdk-rs-helper",
- "cosmos-sdk-rs-store",
+ "cosmos-helper",
+ "cosmos-store",
  "cosmos-x-bank-type",
  "cosmos-x-module-api",
  "cosmrs",
@@ -515,8 +515,8 @@ name = "cosmos-x-bank"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "cosmos-sdk-rs-helper",
- "cosmos-sdk-rs-store",
+ "cosmos-helper",
+ "cosmos-store",
  "cosmos-x-auth",
  "cosmos-x-bank-type",
  "cosmos-x-module-api",
@@ -537,7 +537,7 @@ dependencies = [
 name = "cosmos-x-bank-type"
 version = "0.1.0"
 dependencies = [
- "cosmos-sdk-rs-helper",
+ "cosmos-helper",
  "cosmrs",
  "ibc-proto",
  "primitive-types",
@@ -549,8 +549,8 @@ name = "cosmos-x-gov"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "cosmos-sdk-rs-helper",
- "cosmos-sdk-rs-store",
+ "cosmos-helper",
+ "cosmos-store",
  "cosmos-x-bank-type",
  "cosmos-x-module-api",
  "cosmos-x-upgrade",
@@ -570,8 +570,8 @@ name = "cosmos-x-ibc"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "cosmos-sdk-rs-helper",
- "cosmos-sdk-rs-store",
+ "cosmos-helper",
+ "cosmos-store",
  "cosmos-x-auth",
  "cosmos-x-bank",
  "cosmos-x-bank-type",
@@ -592,8 +592,8 @@ name = "cosmos-x-module-api"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "cosmos-sdk-rs-helper",
- "cosmos-sdk-rs-store",
+ "cosmos-helper",
+ "cosmos-store",
  "cosmrs",
  "ibc-proto",
  "serde_json",
@@ -606,7 +606,7 @@ dependencies = [
 name = "cosmos-x-staking"
 version = "0.1.0"
 dependencies = [
- "cosmos-sdk-rs-store",
+ "cosmos-store",
  "ibc-proto",
  "tonic",
  "tracing",
@@ -617,9 +617,9 @@ name = "cosmos-x-upgrade"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "cosmos-sdk-rs-config",
- "cosmos-sdk-rs-helper",
- "cosmos-sdk-rs-store",
+ "cosmos-config",
+ "cosmos-helper",
+ "cosmos-store",
  "cosmos-x-module-api",
  "cosmrs",
  "derive_more",

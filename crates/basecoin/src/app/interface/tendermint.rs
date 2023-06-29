@@ -26,9 +26,9 @@ use tendermint_proto::crypto::ProofOp;
 use tendermint_proto::crypto::ProofOps;
 
 use crate::app::BaseCoinApp;
-use cosmos_sdk_rs_helper::macros::ResponseFromErrorExt;
-use cosmos_sdk_rs_helper::{Height, Path};
-use cosmos_sdk_rs_store::{ProvableStore, Store};
+use cosmos_helper::macros::ResponseFromErrorExt;
+use cosmos_helper::{Height, Path};
+use cosmos_store::{ProvableStore, Store};
 use cosmos_x_auth::account::ACCOUNT_PREFIX;
 use cosmos_x_module_api::types::IdentifiedModule;
 

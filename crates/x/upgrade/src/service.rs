@@ -17,11 +17,11 @@ use ibc_proto::cosmos::upgrade::v1beta1::QueryUpgradedConsensusStateRequest;
 use ibc_proto::cosmos::upgrade::v1beta1::QueryUpgradedConsensusStateResponse;
 use ibc_proto::google::protobuf::Any;
 
-use cosmos_sdk_rs_helper::Height;
-use cosmos_sdk_rs_store::ProtobufStore;
-use cosmos_sdk_rs_store::SharedStore;
-use cosmos_sdk_rs_store::Store;
-use cosmos_sdk_rs_store::TypedStore;
+use cosmos_helper::Height;
+use cosmos_store::ProtobufStore;
+use cosmos_store::SharedStore;
+use cosmos_store::Store;
+use cosmos_store::TypedStore;
 
 pub struct UpgradeService<S> {
     upgraded_consensus_state_store:

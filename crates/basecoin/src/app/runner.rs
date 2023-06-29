@@ -3,8 +3,8 @@ use ibc_proto::cosmos::tx::v1beta1::service_server::ServiceServer as TxServer;
 use tracing::info;
 
 use super::Builder;
-use cosmos_sdk_rs_config::ServerConfig;
-use cosmos_sdk_rs_store::memory::InMemoryStore;
+use cosmos_config::ServerConfig;
+use cosmos_store::memory::InMemoryStore;
 use cosmos_x_auth::impls::Auth;
 use cosmos_x_bank::impls::Bank;
 use cosmos_x_gov::impls::Governance;

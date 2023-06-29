@@ -1,8 +1,8 @@
 use crate::account::AuthAccount;
 use crate::error::Error;
 use anyhow::Result;
-use cosmos_sdk_rs_helper::Height;
-use cosmos_sdk_rs_store::{ProtobufStore, ProvableStore, SharedStore, Store, TypedStore};
+use cosmos_helper::Height;
+use cosmos_store::{ProtobufStore, ProvableStore, SharedStore, Store, TypedStore};
 use cosmos_x_bank_type::Denom;
 use cosmos_x_module_api::module::Module;
 use cosmrs::AccountId;

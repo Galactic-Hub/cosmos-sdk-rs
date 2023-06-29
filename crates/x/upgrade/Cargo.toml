@@ -19,7 +19,7 @@ anyhow = { workspace = true }
 tracing = { workspace = true }
 thiserror = { workspace = true }
 
-cosmos-sdk-rs-store = { version = "0.1", path = "../../store" }
-cosmos-sdk-rs-helper = { version = "0.1", path = "../../helper" }
+cosmos-store = { version = "0.1", path = "../../store" }
+cosmos-helper = { version = "0.1", path = "../../helper" }
 cosmos-x-module-api = { version = "0.1", path = "../module-api" }
-cosmos-sdk-rs-config = { version = "0.1", path = "../../config" }
+cosmos-config = { version = "0.1", path = "../../config" }

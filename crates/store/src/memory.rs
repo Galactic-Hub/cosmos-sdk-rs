@@ -7,7 +7,7 @@ use crate::{
     avl::{AsBytes, AvlTree},
     context::{ProvableStore, Store},
 };
-use cosmos_sdk_rs_helper::{Height, Path};
+use cosmos_helper::{Height, Path};
 
 /// An in-memory store backed by an AvlTree.
 #[derive(Clone, Debug)]

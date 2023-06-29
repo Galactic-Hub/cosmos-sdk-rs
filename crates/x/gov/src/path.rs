@@ -20,7 +20,7 @@ impl ProposalPath {
     }
 }
 
-impl From<ProposalPath> for cosmos_sdk_rs_helper::Path {
+impl From<ProposalPath> for cosmos_helper::Path {
     fn from(ibc_path: ProposalPath) -> Self {
         Self::try_from(ibc_path.to_string()).unwrap() // safety - `IbcPath`s are correct-by-construction
     }

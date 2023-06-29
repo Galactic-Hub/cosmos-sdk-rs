@@ -42,7 +42,7 @@ impl TryFrom<RawMsgSubmitProposal> for MsgSubmitProposal {
         let coin: Coin = raw.initial_deposit[0]
             .clone()
             .try_into()
-            .map_err(|e: cosmos_sdk_rs_helper::error::Error| Error::Custom(e.to_string()))?;
+            .map_err(|e: cosmos_helper::error::Error| Error::Custom(e.to_string()))?;
 
         Ok(Self {
             content: raw.content.unwrap(),

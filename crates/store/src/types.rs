@@ -5,7 +5,7 @@ use crate::{
     context::Store,
     RevertibleStore, SharedStore,
 };
-use cosmos_sdk_rs_helper::{Height, Path, RawHeight};
+use cosmos_helper::{Height, Path, RawHeight};
 use std::sync::{Arc, RwLock};
 use std::{fmt::Debug, marker::PhantomData};
 

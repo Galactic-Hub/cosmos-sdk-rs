@@ -19,7 +19,7 @@ use ibc_proto::cosmos::gov::v1beta1::QueryVotesRequest;
 use ibc_proto::cosmos::gov::v1beta1::QueryVotesResponse;
 use tonic::{Request, Response, Status};
 
-use cosmos_sdk_rs_store::Store;
+use cosmos_store::Store;
 
 pub struct GovernanceService<S>(pub PhantomData<S>);
 

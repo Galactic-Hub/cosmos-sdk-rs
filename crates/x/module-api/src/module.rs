@@ -1,7 +1,7 @@
 use crate::error::Error;
 use anyhow::Result;
-use cosmos_sdk_rs_helper::{Height, Identifier as StoreIdentifier, Path, QueryResult};
-use cosmos_sdk_rs_store::impls::SharedStore;
+use cosmos_helper::{Height, Identifier as StoreIdentifier, Path, QueryResult};
+use cosmos_store::impls::SharedStore;
 use cosmrs::AccountId;
 use ibc_proto::google::protobuf::Any;
 use tendermint::block::Header;
@@ -80,7 +80,7 @@ pub mod prefix {
     use core::convert::TryInto;
 
     use super::Identifiable;
-    use cosmos_sdk_rs_helper::Identifier as StoreIdentifier;
+    use cosmos_helper::Identifier as StoreIdentifier;
 
     /// Bank module prefix
     #[derive(Clone)]

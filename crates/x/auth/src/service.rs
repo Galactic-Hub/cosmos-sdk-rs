@@ -1,5 +1,5 @@
 use crate::{account::RELAYER_ACCOUNT, context::AccountReader};
-use cosmos_sdk_rs_store::ProvableStore;
+use cosmos_store::ProvableStore;
 use ibc_proto::cosmos::auth::v1beta1::{
     query_server::Query, AddressBytesToStringRequest, AddressBytesToStringResponse,
     AddressStringToBytesRequest, AddressStringToBytesResponse, Bech32PrefixRequest,

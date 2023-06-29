@@ -1,7 +1,7 @@
 use std::{borrow::Borrow, fmt::Debug, sync::Arc};
 
 use crate::transfer::IbcTransferModule;
-use cosmos_sdk_rs_store::Store;
+use cosmos_store::Store;
 use cosmos_x_bank::impls::BankBalanceKeeper;
 use ibc::{
     applications::transfer::MODULE_ID_STR as IBC_TRANSFER_MODULE_ID,

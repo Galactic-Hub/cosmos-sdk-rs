@@ -5,8 +5,8 @@ use super::{
 use crate::error::Error;
 use crate::transfer::IbcTransferModule;
 use anyhow::Result;
-use cosmos_sdk_rs_helper::{Height, Path, QueryResult};
-use cosmos_sdk_rs_store::{
+use cosmos_helper::{Height, Path, QueryResult};
+use cosmos_store::{
     SharedStore, {BinStore, JsonStore, ProtobufStore, TypedSet, TypedStore}, {ProvableStore, Store},
 };
 use cosmos_x_bank::impls::BankBalanceKeeper;
@@ -261,9 +261,7 @@ where
         let path: Path = String::from_utf8(data.to_vec())
             .map_err(|e| Error::InvalidDomainPath(e.to_string()))?
             .try_into()
-            .map_err(|e: cosmos_sdk_rs_helper::error::Error| {
-                Error::InvalidDomainPath(e.to_string())
-            })?;
+            .map_err(|e: cosmos_helper::error::Error| Error::InvalidDomainPath(e.to_string()))?;
 
         let _ =
             IbcPath::try_from(path.clone()).map_err(|e| Error::InvalidIbcPath(e.to_string()))?;

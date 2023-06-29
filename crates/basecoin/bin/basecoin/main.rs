@@ -9,7 +9,7 @@ use basecoin::{
 };
 
 use clap::Parser;
-use cosmos_sdk_rs_config::load_config;
+use cosmos_config::load_config;
 use cosmos_x_upgrade::query::query_upgrade_plan;
 use tracing::metadata::LevelFilter;
 

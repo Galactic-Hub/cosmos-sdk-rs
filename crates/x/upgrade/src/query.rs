@@ -5,7 +5,7 @@ use tendermint_rpc::{Client, HttpClient};
 
 use super::path::UpgradePlanPath;
 use anyhow::Result;
-use cosmos_sdk_rs_config::CometbftConfig;
+use cosmos_config::CometbftConfig;
 
 pub(crate) const UPGRADE_PLAN_QUERY_PATH: &str = "/cosmos.upgrade.v1beta1.Query/CurrentPlan";
 
