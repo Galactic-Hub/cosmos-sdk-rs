@@ -62,6 +62,9 @@ pub enum Error {
 
     #[error("custom error: `{0}`")]
     Custom(String),
+
+    #[error("account id error: `{0}`")]
+    InvalidAccountId(String),
 }
 
 impl From<std::convert::Infallible> for Error {
