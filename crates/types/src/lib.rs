@@ -1,3 +1,7 @@
+// todo need remove
+#![allow(dead_code)]
+#![allow(deprecated)]
+
 pub mod account;
 pub mod address;
 pub mod auth;
@@ -8,6 +12,7 @@ pub mod coin;
 // pub mod collections;
 pub mod config;
 pub mod context;
+pub mod crypto;
 // pub mod dec_coin;
 // pub mod denom;
 pub mod errors;
