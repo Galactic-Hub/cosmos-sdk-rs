@@ -1,6 +1,6 @@
-pub mod abci;
 pub mod account;
 pub mod address;
+pub mod base;
 // pub mod authz;
 // pub mod bech32;
 pub mod coin;
@@ -32,3 +32,6 @@ pub mod tx_msg;
 // pub mod utils;
 
 pub mod serializers;
+
+/// Gas cost.
+pub type Gas = u64;

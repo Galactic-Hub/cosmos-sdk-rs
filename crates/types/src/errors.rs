@@ -53,6 +53,15 @@ pub enum Error {
 
     #[error("decoding address from hex string failed: empty address")]
     EmptyHexAddress,
+
+    #[error("TxMsgData::msg_responses unsupported")]
+    TxMsgDataUnsupported,
+
+    #[error("decoding error: `{0}`")]
+    DecodeError(#[from] prost::DecodeError),
+
+    #[error("custom error: `{0}`")]
+    Custom(String),
 }
 
 impl From<std::convert::Infallible> for Error {
