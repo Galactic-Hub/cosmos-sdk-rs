@@ -22,7 +22,7 @@ use tower::Service;
 use tower_abci::BoxError;
 
 use crate::app::BaseCoinApp;
-use cosmos_sdk_rs_store::ProvableStore;
+use cosmos_store::ProvableStore;
 
 /// We have to create this type since the compiler doesn't think that
 /// `dyn Future<Output = Result<AbciResponse, BoxError>> + Send`
