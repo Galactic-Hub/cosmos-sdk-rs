@@ -5,8 +5,8 @@
 pub mod account;
 pub mod address;
 pub mod auth;
+pub mod authz;
 pub mod base;
-// pub mod authz;
 // pub mod bech32;
 pub mod coin;
 // pub mod collections;
