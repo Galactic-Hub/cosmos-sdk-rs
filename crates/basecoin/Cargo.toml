@@ -40,17 +40,17 @@ thiserror = { workspace = true }
 tower-abci = { workspace = true, optional = true }
 tower = { workspace = true, features = ["full"], optional = true }
 
-cosmos-store = { version = "0.1", path = "../store" }
-cosmos-config = { version = "0.1", path = "../config" }
-cosmos-helper = { version = "0.1", path = "../helper" }
-cosmos-x-auth = { version = "0.1", path = "../x/auth" }
-cosmos-x-bank = { version = "0.1", path = "../x/bank" }
-cosmos-x-bank-type = { version = "0.1", path = "../x/bank/bank-type" }
-cosmos-x-gov = { version = "0.1", path = "../x/gov" }
-cosmos-x-ibc = { version = "0.1", path = "../x/ibc" }
-cosmos-x-module-api = { version = "0.1", path = "../x/module-api" }
-cosmos-x-staking = { version = "0.1", path = "../x/staking" }
-cosmos-x-upgrade = { version = "0.1", path = "../x/upgrade" }
+cosmos-store = { workspace = true }
+cosmos-config = { workspace = true }
+cosmos-helper = { workspace = true }
+cosmos-x-auth = { workspace = true }
+cosmos-x-bank = { workspace = true }
+cosmos-x-bank-type = { workspace = true }
+cosmos-x-gov = { workspace = true }
+cosmos-x-ibc = { workspace = true }
+cosmos-x-module-api = { workspace = true }
+cosmos-x-staking = { workspace = true }
+cosmos-x-upgrade = { workspace = true }
 
 [dev-dependencies]
 bytes = { workspace = true }

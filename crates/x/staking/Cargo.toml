@@ -10,4 +10,4 @@ ibc-proto = { workspace = true, default-features = false, features = ["server"] 
 tonic = { workspace = true }
 tracing = { workspace = true }
 
-cosmos-store = { version = "0.1", path = "../../store" }
+cosmos-store = { workspace = true }

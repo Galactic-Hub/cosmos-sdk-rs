@@ -10,4 +10,4 @@ cosmrs = { workspace = true }
 serde = {  workspace = true  }
 primitive-types = { workspace = true, default-features = false, features = ["serde_no_std"] }
 ibc-proto = { workspace = true, default-features = false, features = ["server"] }
-cosmos-helper = { version = "0.1", path = "../../../helper" }
+cosmos-helper = { workspace = true }

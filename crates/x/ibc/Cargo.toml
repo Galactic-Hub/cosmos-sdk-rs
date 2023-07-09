@@ -17,9 +17,9 @@ anyhow = { workspace = true }
 tracing = { workspace = true }
 thiserror = { workspace = true }
 
-cosmos-store = { version = "0.1", path = "../../store" }
-cosmos-helper = { version = "0.1", path = "../../helper" }
-cosmos-x-module-api = { version = "0.1", path = "../module-api" }
-cosmos-x-bank-type = { version = "0.1", path = "../bank/bank-type" }
-cosmos-x-auth = { version = "0.1", path = "../auth" }
-cosmos-x-bank = { version = "0.1", path = "../bank" }
+cosmos-store = { workspace = true }
+cosmos-helper = { workspace = true }
+cosmos-x-module-api = { workspace = true }
+cosmos-x-bank-type = { workspace = true }
+cosmos-x-auth = {workspace = true }
+cosmos-x-bank = { workspace = true }

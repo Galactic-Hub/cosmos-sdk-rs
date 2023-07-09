@@ -13,7 +13,7 @@ sha2 = { workspace = true }
 tendermint = { workspace = true }
 tracing = { workspace = true }
 
-cosmos-helper = { version = "0.1", path = "../helper" }
+cosmos-helper = { workspace = true }
 
 [dev-dependencies]
 bytes = { workspace = true }

@@ -63,5 +63,23 @@ lazy_static = "1.4.0"
 proptest = "*"
 rand = "*"
 
+# for local crates
+basecoin = { version = "0.1", path = "./crates/basecoin" }
+cosmos-config = { version = "0.1", path = "./crates/config" }
+cosmos-core = { versino = "0.1", path = "./crates/core" }
+cosmos-crypto = { version = "0.1", path = "./crates/crypto" }
+cosmos-helper = { version = "0.1", path = "./crates/helper" }
+cosmos-store = { version = "0.1", path = "./crates/store" }
+cosmos-types = { version = "0.1", path = "./crates/types" }
+cosmos-x-auth = { version = "0.1", path = "./crates/x/auth" }
+cosmos-x-bank-type = { version = "0.1", path = "./crates/x/bank/bank-type" }
+cosmos-x-bank = { version = "0.1", path = "./crates/x/bank" }
+cosmos-x-gov = { version = "0.1", path = "./crates/x/gov" }
+cosmos-x-ibc = { version = "0.1", path = "./crates/x/ibc" }
+cosmos-x-module-api = { version = "0.1", path = "./crates/x/module-api" }
+cosmos-x-staking = { version = "0.1", path = "./crates/x/staking" }
+cosmos-x-upgrade = { version = "0.1", path = "./crates/x/upgrade" }
+
+
 [patch.crates-io]
 ibc-proto = { git = "https://github.com/Galactic-Hub/ibc-proto-rs.git", branch = "dev-v0.32.0" }
